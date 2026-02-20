@@ -1,0 +1,78 @@
+@baseUrl = http://localhost:5000
+### Create product (seller only)
+POST {{baseUrl}}/api/products/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0Y2M4MTE5LWZlNjItNDgwYy04ZWVkLTdlNjE4YzE2M2JiYSIsImVtYWlsIjoiZGV2LnByYWJpbnNocmVzdGhhQGdtYWlsLmNvbSIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE3NzE1NTk1NDUsImV4cCI6MTc3MTY0NTk0NX0.5wRw-4SAZEYsHa-OJ2Vd1OFDal0Ef-1c0BaB2UblaaU
+
+{
+  "name": "Samsung Galaxy S23 Ultra",
+  "productCategory": "bac2456c-5e99-4164-b7bc-f8ea56a1b139",
+  "productImage": [
+    "https://example.com/images/samsung-galaxy-s23-ultra-front.jpg",
+    "https://example.com/images/samsung-galaxy-s23-ultra-back.jpg"
+  ],
+  "description": {
+    "short": "Latest Samsung flagship smartphone",
+    "details": "6.7-inch Dynamic AMOLED display, Exynos 2200 chip, 256GB storage, Titanium body.",
+    "specifications": {
+      "display": "6.7-inch Dynamic AMOLED",
+      "processor": "Exynos 2200",
+      "storage": "256GB",
+      "camera": "48MP Triple Camera",
+      "battery": "Up to 29 hours video playback"
+    }
+  },
+  "brand": "Samsung",
+  "costPrice": 1200.00,
+  "sellingPrice": 1400.00,
+  "comparePrice": 1500.00,
+  "stock": 25
+}
+
+###
+
+GET {{baseUrl}}/api/products
+Content-Type: application/json
+
+
+###
+GET {{baseUrl}}/api/products/f9edca2f-87e0-4bc6-8e44-0e8c922befeb
+Content-Type: application/json
+
+
+
+###
+GET {{baseUrl}}/api/products?category=bac2456c-5e99-4164-b7bc-f8ea56a1b139
+Content-Type: application/json
+
+
+
+### Update product (seller only)
+PUT {{baseUrl}}/api/products/f9edca2f-87e0-4bc6-8e44-0e8c922befeb
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0Y2M4MTE5LWZlNjItNDgwYy04ZWVkLTdlNjE4YzE2M2JiYSIsImVtYWlsIjoiZGV2LnByYWJpbnNocmVzdGhhQGdtYWlsLmNvbSIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE3NzE1NTk1NDUsImV4cCI6MTc3MTY0NTk0NX0.5wRw-4SAZEYsHa-OJ2Vd1OFDal0Ef-1c0BaB2UblaaU
+
+{
+  "name": "Samsung Galaxy S23 Ultra",
+  "productCategory": "bac2456c-5e99-4164-b7bc-f8ea56a1b139",
+  "productImage": [
+    "https://example.com/images/samsung-galaxy-s23-ultra-front.jpg",
+    "https://example.com/images/samsung-galaxy-s23-ultra-back.jpg"
+  ],
+  "description": {
+    "short": "Latest Samsung flagship smartphone",
+    "details": "6.7-inch Dynamic AMOLED display, Exynos 2200 chip, 256GB storage, Titanium body.",
+    "specifications": {
+      "display": "6.7-inch Dynamic AMOLED",
+      "processor": "Exynos 2200",
+      "storage": "256GB",
+      "camera": "48MP Triple Camera",
+      "battery": "Up to 29 hours video playback"
+    }
+  },
+  "brand": "Samsung",
+  "costPrice": 1200.00,
+  "sellingPrice": 1400.00,
+  "comparePrice": 1500.00,
+  "stock": 25
+}

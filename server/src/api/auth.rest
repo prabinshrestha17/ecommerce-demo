@@ -1,0 +1,54 @@
+@baseUrl = http://localhost:5000
+
+### customer token
+@token= eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNjNmE2MDg5LTg2ZWQtNDhiMC04YjBjLWZlMzUxZmUwYTdlZSIsImVtYWlsIjoieHRoYXByYWJpbjEyNUBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3NzE1NTk5NTksImV4cCI6MTc3MTY0NjM1OX0.Y3JUt4QdNxGT6ib5lWdGKTvYsp7y8r19qwgMQ2n4ymc
+
+### Register customer
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+	"username": "cprabin dada",
+	"email": "xthaprabin125@gmail.com",
+	"password": "Password@123",
+	"role": "customer"
+}
+
+### Register seller
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+	"username": "seller_one",
+	"email": "dev.prabinshrestha@gmail.com",
+	"password": "Password@123",
+	"role": "seller"
+}
+###
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+	"email": "dev.prabinshrestha@gmail.com",
+	"password": "Password@123",
+	"role": "seller"
+}
+
+
+
+### Verify account (manual alternative)
+POST {{baseUrl}}/api/auth/verify
+Content-Type: application/json
+
+{
+	"email": "xthaprabin125@gmail.com"
+}
+
+### Login customer (works only after verification)
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+	"email": "xthaprabin125@gmail.com",
+	"password": "Password@123"
+}

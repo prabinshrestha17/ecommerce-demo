@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:5000
+@customerToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNjNmE2MDg5LTg2ZWQtNDhiMC04YjBjLWZlMzUxZmUwYTdlZSIsImVtYWlsIjoieHRoYXByYWJpbjEyNUBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3NzE1NTk5NTksImV4cCI6MTc3MTY0NjM1OX0.Y3JUt4QdNxGT6ib5lWdGKTvYsp7y8r19qwgMQ2n4ymc 
+### Create cart item
+POST {{baseUrl}}/api/cart/create
+Content-Type: application/json
+Authorization: Bearer {{customerToken}}
+
+{
+  "productId":"f9edca2f-87e0-4bc6-8e44-0e8c922befeb",
+  "quantity": 2
+} 
+
+### Get my cart
+GET {{baseUrl}}/api/cart
+Authorization: Bearer {{customerToken}}
+
+

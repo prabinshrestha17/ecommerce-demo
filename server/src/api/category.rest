@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:5000
+### Create category (admin only)
+POST {{baseUrl}}/api/categories/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0Y2M4MTE5LWZlNjItNDgwYy04ZWVkLTdlNjE4YzE2M2JiYSIsImVtYWlsIjoiZGV2LnByYWJpbnNocmVzdGhhQGdtYWlsLmNvbSIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE3NzE1NTk1NDUsImV4cCI6MTc3MTY0NTk0NX0.5wRw-4SAZEYsHa-OJ2Vd1OFDal0Ef-1c0BaB2UblaaU
+
+{
+  "name": "Electronics",
+  "icon": "https://images/electronics.png",
+  "description": "All kinds of electronic gadgets and devices."
+}
+
+### Get all categories
+GET {{baseUrl}}/api/categories
+Content-Type: application/json
+
+### Get category by ID
+GET {{baseUrl}}/api/categories/bac2456c-5e99-4164-b7bc-f8ea56a1b139
+Content-Type: application/json
