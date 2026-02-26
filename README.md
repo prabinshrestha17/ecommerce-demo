@@ -1,6 +1,6 @@
 <div align="center">
 
-![Ecommerce Demo Logo](./client/public/logo.png)
+
 
 # Ecommerce Demo Platform
 
@@ -324,6 +324,6 @@ This project is **private** and proprietary.
 
 <div align="center">
 
-Built with ❤️ using Next.js, Express, and PostgreSQL.
+Built using Next.js, Express, and PostgreSQL.
 
 </div>
