@@ -28,7 +28,7 @@ export default function AuthForm({ type }) {
               <ShoppingBag size={22} />
             </div>
             <span className="font-bold text-2xl tracking-tighter text-foreground uppercase tracking-widest">
-              Cozy
+              Mero pasal
             </span>
           </Link>
 

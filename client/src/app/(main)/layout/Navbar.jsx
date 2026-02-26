@@ -51,7 +51,7 @@ export default function Navbar() {
             <div className="flex flex-col -space-y-1">
               <div className="flex items-center gap-1.5">
                 <span className="font-bold text-2xl text-foreground tracking-tight">
-                  Cozy
+                  Mero pasal
                 </span>
                 <Badge className="h-4 px-1 text-[9px] bg-primary text-white border-none font-bold uppercase">
                   Demo
